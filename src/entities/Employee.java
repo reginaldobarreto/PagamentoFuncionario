@@ -49,5 +49,12 @@ public class Employee {
 	public Double payment() {
 		return hours * valuePerHour;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("PAYMENTS: ");
+		sb.append(name + " - $" + payment());
+		return sb.toString();
+	}
 
 }

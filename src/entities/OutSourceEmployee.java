@@ -23,6 +23,16 @@ public class OutSourceEmployee extends Employee{
 		this.additionalCharge = additionalCharge;
 	}
 	
+	@Override
+	public Double payment() {
+		return super.getValuePerHour() * super.getHours() + (additionalCharge * 1.1d);
+	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("PAYMENTS: \n");
+		sb.append(super.getName() + " - $" + payment());
+		return sb.toString();
+	}
 
 }
